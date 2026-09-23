@@ -622,6 +622,7 @@ footer {
 #user-status {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 #user-info {
@@ -663,4 +664,184 @@ footer {
 
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Announcement banner */
+.announcement-banner {
+  background-color: var(--secondary);
+  color: var(--secondary-text);
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.announcement-banner-item {
+  text-align: center;
+  padding: 8px 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Manage announcements button */
+#manage-announcements-button {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Larger modal used for the announcements manager */
+.modal-content-large {
+  max-width: 560px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+#announcements-modal .modal-content h3 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+#announcement-message {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+#announcement-message:focus,
+.form-row input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 2px rgba(83, 75, 174, 0.1);
+}
+
+.announcement-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.announcements-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 18px 0 14px;
+}
+
+#announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.announcement-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: var(--background);
+}
+
+.announcement-item.is-active {
+  border-left: 4px solid var(--success);
+}
+
+.announcement-item.is-expired {
+  border-left: 4px solid var(--border);
+  opacity: 0.65;
+}
+
+.announcement-item.is-scheduled {
+  border-left: 4px solid var(--warning);
+}
+
+.announcement-item-content {
+  flex: 1;
+}
+
+.announcement-item-message {
+  font-weight: 500;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.announcement-item-dates {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.announcement-item-status {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.announcement-item.is-active .announcement-item-status {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.announcement-item.is-expired .announcement-item-status {
+  background-color: var(--border-light);
+  color: var(--text-secondary);
+}
+
+.announcement-item.is-scheduled .announcement-item-status {
+  background-color: var(--warning-light);
+  color: var(--warning);
+}
+
+.announcement-item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.announcement-item-actions button {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.announcement-edit-btn {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.announcement-delete-btn {
+  background-color: var(--error);
+  color: white;
+}
+
+.no-announcements {
+  text-align: center;
+  padding: 12px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
 }
